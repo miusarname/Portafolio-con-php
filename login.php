@@ -1,3 +1,14 @@
+<?php
+session_start();
+if($_POST){
+    if(($_POST['user'] == 'Admin') && ($_POST['password'] == 'root')){
+        $_SESSION['user']="Admin";
+        header("location:index.php");
+    }else{
+        echo "<script> alert('Incorrect username and/or passwordincorrect username and/or password'); </script>";
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -27,8 +38,8 @@
                 <div class="card-body">
                 <form action="login.php" method="post">
 
-User: <input class="form-control" type="text" name="user" id=""> <br>
-Password: <input class="form-control" type="password" name="password" id=""> <br>
+User: <input placeholder="Username" class="form-control" type="text" name="user" id=""> <br>
+Password: <input placeholder="Password" class="form-control" type="password" name="password" id=""> <br>
 <br>
 <button class="btn btn-success" type="submit">Login to briefcase</button>
 
