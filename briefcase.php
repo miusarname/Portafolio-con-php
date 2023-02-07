@@ -81,6 +81,11 @@ if ($_GET) {
                                     <td style="cursor: pointer;"><?php echo $project['id']; ?></td>
                                     <td style="cursor: pointer;"><?php echo $project['name']; ?></td>
                                     <td style="cursor: pointer;"><?php echo $project['image']; ?></td>
+                                    <!-- <td style="cursor: pointer;">
+                                    
+                                    <img width="100" src="Archivos/<?php echo $project['image']; ?>" alt="">
+                                
+                                </td> -->
                                     <td style="cursor: pointer;"><?php echo $project['Description']; ?></td>
                                     <td style="cursor: pointer;"><a href="?delete=<?php echo $project['id']; ?>" class="btn btn-danger" role="button">Eliminar</a></td>
                                 </tr>
